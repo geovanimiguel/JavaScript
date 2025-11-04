@@ -7,8 +7,8 @@
     <style>
         body {
             font: normal 1em Arial;
-            background-color: #333;
-            color: #fff;
+            background-color: lightgray;
+            color: #000;
         }
     </style>
 </head>
@@ -18,7 +18,11 @@
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
     <div>Clique em mim</div>
     <script>
-
+        var corpo = document.body
+        var p1 = document.getElementsByTagName("p")[1]
+        document.alert(p1.innerHTML)
+        // p1.style.color = "blue" 
+        // corpo.style.backgroundColor = "lightyellow"
     </script>
 </body>
 </html>
