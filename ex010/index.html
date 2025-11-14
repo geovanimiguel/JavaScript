@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transito</title>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <input type="number" name="txtn1" id="txtn1" placeholder="Velocidade do carro"> Km/h
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar() {
+            var txtn1 = window.document.querySelector("input#txtn1")
+            var res = document.querySelector("div#res")
+            var vel = Number(txtn1.value)
+            res.innerHTML = `A velocidade do seu carro é <strong>${vel} Km/h</strong><br>`
+            if (vel > 80) {
+                res.innerHTML += `<p> Você foi <strong>Multado</strong> por excesso de velocidade!</p>`
+            }
+            res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+        }
+    </script>
+</body>
+</html>
