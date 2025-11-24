@@ -6,7 +6,7 @@
     <title>Desafio Países</title>
 </head>
 <body>
-    <h1>Qual sua Origem</h1>
+    <h1>Nacional / Estrangeiro</h1>
     <form action="#" method="get">
         <label for="pais">Qual seu país de origem?</label>
         <input type="text" name="pais" id="pais" placeholder="Escreva aqui...">
@@ -14,9 +14,19 @@
         <div id="res"></div>
     </form>
     <script>
+            
         function verificar() {
-                var pais = document.querySelector("input#pais")
-                var res = document.querySelector()
+            var pais = document.getElementById("pais")
+            var res = document.querySelector("div#res")
+            var orig = String(pais.value)
+            res.innerHTML = `<p>O seu país é ${orig} </p>`
+
+                if (pais.value == 'Angola') {
+                    res.innerHTML += `<p>Você é um cidadão nacional</p>` 
+                }                
+                else {
+                    res.innerHTML += `<p>Você é um estrangeiro</p>`
+                }
             }
     </script>
 </body>
