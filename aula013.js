@@ -2,7 +2,6 @@ var agora = new Date()
 var dayWeek = agora.getDay()
 
 dayWeek = 6
-
 switch(dayWeek) {
     case 0:
         console.log("Domingo")
